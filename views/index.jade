@@ -1,0 +1,17 @@
+extends layout
+block content
+        h1= title
+        form(method='post', name='', action='/upload/shp',enctype='multipart/form-data')
+                        table.form_table(cellspacing='5', cellpadding='5', border='0')
+                                        tbody
+                                                        tr
+                                                                        td.label File Name:
+                                                                        td
+                                                                                        input(type='file', name='shapefile', id='fileUploader', accept='zip,application/octet-stream,application/zip,application/x-zip,application/x-zip-compressed')
+                                                        tr
+                                                                        td
+                                                                        td(colspan='3')
+                                                                                        br
+                                                                                        input.button2(type='submit', value='Upload', id='fileUploadButton')
+       
+        #map(style='height: 900px; width:100%')
